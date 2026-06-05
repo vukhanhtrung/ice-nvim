@@ -75,3 +75,4 @@ vim.diagnostic.config({
 	severity_sort = true, -- Added: show more severe errors first
 	float = { border = "rounded" }, -- Added: prettier float windows
 })
+-- End
