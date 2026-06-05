@@ -1,0 +1,5 @@
+require("core")
+require("hotkeys")
+require("plugins")
+require("theme")
+require("autocmd")
