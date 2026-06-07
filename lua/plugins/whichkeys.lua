@@ -5,4 +5,5 @@ wk.add({
 	{ "<leader>c", group = "Code" },
 	{ "<leader>f", group = "Fzf" },
 	{ "<leader>l", group = "List" },
+	{ "<leader>a", group = "AI" },
 })
