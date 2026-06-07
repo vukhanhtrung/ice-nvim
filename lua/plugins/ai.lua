@@ -9,10 +9,10 @@ vim.g.opencode_opts = {}
 
 -- Keybindings
 
--- <leader>at - Follow AGENT-TODO instruction in current buffer
+-- <leader>at - Follow AI! instruction in current buffer
 vim.keymap.set({ "n", "x" }, "<leader>at", function()
-	require("opencode").ask("@buffer: follow the AGENT-TODO")
-end, { desc = "Follow AGENT-TODO instruction for buffer" })
+	require("opencode").ask("@buffer: follow the AI!", { submit = true })
+end, { desc = "Follow AI! instruction for buffer" })
 
 -- <leader>aa - Ask opencode a custom question
 vim.keymap.set({ "n", "x" }, "<leader>aa", function()

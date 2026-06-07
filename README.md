@@ -283,7 +283,7 @@ Catppuccin with the **Frappe** flavour.
 | `<leader>fr` | fzf-lua | LSP references |
 | `<leader>ca` | fzf-lua | Code actions (overrides LSP default) |
 | `=` | conform.nvim | Format document |
-| `<leader>at` | opencode.nvim | Follow AGENT-TODO |
+| `<leader>at` | opencode.nvim | Follow AI! marker |
 | `<leader>aa` | opencode.nvim | Ask OpenCode |
 | `<leader>as` | opencode.nvim | Cycle options |
 | `<leader>ac` | opencode.nvim | Select agent |
