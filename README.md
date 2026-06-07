@@ -1,6 +1,6 @@
 # ice-nvim
 
-my nvim config
+my nv cim config
 
 ---
 
@@ -95,6 +95,50 @@ These plugins are in `lua/plugins/disabled/` and not loaded.
 |---|---|
 | [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) | Replaced by mini.diff for git diffing |
 | [yazi.nvim](https://github.com/mikavilpas/yazi.nvim) | Requires `yazi` binary; replaced by mini.files |
+
+---
+
+## AI! Marker
+
+The `AI!` marker is a convention for embedding AI-actionable instructions directly in source files. Markers are single-line comments that begin with `AI!` and describe a task for the AI assistant to perform.
+
+### Syntax
+
+```
+// AI! <instruction>
+```
+
+The marker must be the first non-blank content after the comment delimiter. Any text after `AI! ` is treated as the instruction.
+
+### Usage
+
+1. **Add a marker** to a file as a comment in the appropriate language:
+   - Lua: `-- AI! do something`
+   - JS/TS: `// AI! do something`
+   - Python: `# AI! do something`
+2. **Run the command** `<leader>at` (opencode.nvim's "Follow AI! marker").
+3. The AI reads the file, finds the marker, and executes the instruction.
+
+### Multiline Instructions
+
+AI! markers are single-line by convention. To express a multiline instruction, use consecutive comment lines immediately after the marker line. The AI treats all contiguous comment lines following the marker as part of the same instruction:
+
+```lua
+-- AI! refactor this function to take an options table,
+-- support a `timeout` field defaulting to 30,
+-- and validate that timeout is a positive number
+-- before proceeding with the original logic
+local function do_work(arg)
+```
+
+```
+# AI! add input validation,
+# error handling with a custom exception type,
+# and logging at debug level
+def process(data):
+```
+
+Only the first line needs the `AI!` prefix; subsequent lines are continuation of the same instruction.
 
 ---
 

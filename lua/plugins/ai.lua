@@ -1,5 +1,5 @@
 -- OpenCode plugin configuration for AI-assisted coding in Neovim
-
+-- AI! answer me what mode are you in (build or plan)
 -- Automatically re-read files when changed externally, useful for AI edits
 vim.o.autoread = true
 
@@ -11,7 +11,7 @@ vim.g.opencode_opts = {}
 
 -- <leader>at - Follow AI! instruction in current buffer
 vim.keymap.set({ "n", "x" }, "<leader>at", function()
-	require("opencode").ask("@buffer: follow the AI!", { submit = true })
+	require("opencode").prompt("@buffer: follow the AI! marker instructions", { submit = true })
 end, { desc = "Follow AI! instruction for buffer" })
 
 -- <leader>aa - Ask opencode a custom question
