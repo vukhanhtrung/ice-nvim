@@ -6,13 +6,11 @@ if vim.fn.executable("fzf") == 0 then
 	)
 	return
 end
-vim.pack.add({
-	"https://github.com/nvim-tree/nvim-web-devicons",
-	"https://github.com/ibhagwan/fzf-lua",
-})
+vim.pack.add({ "https://github.com/ibhagwan/fzf-lua", "https://github.com/nvim-tree/nvim-web-devicons" })
 -- =====================
 -- FZF (fzf-lua) pickers
 -- =====================
+require("nvim-web-devicons").setup()
 local fzf = require("fzf-lua")
 
 vim.keymap.set("n", "<leader>fp", "<cmd>FzfLua<CR>", { desc = "Open Fzf Prompt" })
