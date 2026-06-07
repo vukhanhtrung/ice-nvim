@@ -24,11 +24,7 @@ require("better_escape").setup({
 				j = "<C-\\><C-n>",
 			},
 		},
-		v = {
-			j = {
-				k = "<Esc>",
-			},
-		},
+		v = {},
 		s = {
 			j = {
 				k = "<Esc>",
