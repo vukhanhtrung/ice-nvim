@@ -8,7 +8,11 @@ vim.keymap.set("i", "<C-k>", vim.lsp.buf.signature_help, { desc = "Signature Hel
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code Action" })
 vim.keymap.set("n", "<leader>cr", vim.lsp.buf.rename, { desc = "LSP Rename" })
 vim.keymap.set("n", "<leader>K", vim.diagnostic.open_float, { desc = "Diagnostic Hover" })
-
+-- Clear search highlighting with double escape
+vim.keymap.set("n", "<esc><esc>", function()
+	vim.cmd("nohlsearch")
+	return "<esc>"
+end, { expr = true, desc = "Clear search highlights" })
 -- [[Custom Hotkeys]]
 vim.keymap.set({ "v", "n" }, "<leader>t", "<cmd>sp +term<cr>", { desc = "Split Terminal Horizonally" })
 
