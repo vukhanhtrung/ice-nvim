@@ -1,4 +1,5 @@
 vim.pack.add({ "https://github.com/neovim/nvim-lspconfig", "https://github.com/WieeRd/auto-lsp.nvim" })
 -- vim.lsp.enable("lua_ls")
 -- vim.lsp.enable("nim_langserver")
-require("auto-lsp").setup()
+vim.lsp.enable("ols")
+-- require("auto-lsp").setup()
